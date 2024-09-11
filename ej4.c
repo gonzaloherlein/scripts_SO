@@ -6,11 +6,11 @@
 
 int main(int argc, char *argv[])
 {
-    int num, n;
+    int num;
     pid_t nuevo;
-    for (num = 1; num <= n; num++) {
+    for (num = 1; num <= 3; num++) {
         nuevo = fork();
-        if ((num == n) && (nuevo == 0))
+        if ((num == 3) && (nuevo == 0))
             execlp("ls", "ls", "-l", NULL);
     }
     return 0;
